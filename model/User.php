@@ -30,4 +30,18 @@ class User
         $res = $this->cone->query($sql);
         $users = $res->fetchAll(PDO::FETCH_ASSOC);
     }
+    // Methode Update
+    public function updateUsers($id, $nom, $email, $password)
+    {
+        if (!$id || !$nom || $email || $password) {
+            throw new ErrorException("Error Processing Request", 1);
+        }
+        $sql = "UPDATE FROM ($this->table) set (name=?, email=?, password=?) where (id = ?)";
+        $stmt = $this->cone->prepare($sql);
+        $stmt->execute([$id, $nom, $email, password_hash($password, PASSWORD_DEFAULT)]);
+        if ($stmt->rowCount() == 0) {
+            throw new Exception("vous n'avez pas fait aucune modification.", 1);
+        }
+        return true;
+    }
 }
