@@ -1,5 +1,6 @@
 <?php
 class User {
+
     private $cone;
     private $table = "users";
 
@@ -10,10 +11,29 @@ class User {
     public function createUsers($nom, $email, $password) {
         $sql = "INSERT INTO {$this->table} (nom, email, password) VALUES (?,?,?)";
         $stmt = $this->cone->prepare($sql);
-        return $stmt->execute([$nom, $email, password_hash($password, PASSWORD_DEFAULT)]);
+
+        return $stmt->execute([
+            $nom,
+            $email,
+            password_hash($password, PASSWORD_DEFAULT)
+        ]);
     }
 
-    //Methode delete
+    //user by Id
+    public function getById($id){
+
+        $sql = "SELECT * FROM {$this->table} WHERE id = :id";
+
+        $stmt = $this->cone->prepare($sql);
+
+        $stmt->execute([
+            'id' => $id
+        ]);
+
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
+        //Methode delete
     public function deleteUsers($id) {
         $sql = "DELETE FROM {$this->table} WHERE id = ?";
         $stmt = $this->cone->prepare($sql);
@@ -32,4 +52,7 @@ class User {
         }
         return true;
     }
+
 }
+?>
+
