@@ -1,7 +1,15 @@
+<<<<<<< HEAD
 CREATE TABLE IF NOT EXISTS users (
+=======
+CREATE TABLE IF NOT EXISTS users (  
+>>>>>>> 51e1b0f5e77da22dd2df4ba7417c5932e1d11c68
     id INT PRIMARY KEY AUTO_INCREMENT,
     nom VARCHAR(100) NOT NULL,
     email VARCHAR(50) NOT NULL,
     password VARCHAR(255) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+<<<<<<< HEAD
 )
+=======
+);
+>>>>>>> 51e1b0f5e77da22dd2df4ba7417c5932e1d11c68
