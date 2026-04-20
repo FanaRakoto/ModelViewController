@@ -1,5 +1,6 @@
 <?php
 class User {
+
     private $cone;
     private $table = "users";
 
@@ -11,6 +12,25 @@ class User {
 
         $sql = "INSERT INTO {$this->table} (nom, email, password) VALUES (?,?,?)";
         $stmt = $this->cone->prepare($sql);
-        return $stmt->execute([$nom, $email, password_hash($password, PASSWORD_DEFAULT)]);
+
+        return $stmt->execute([
+            $nom,
+            $email,
+            password_hash($password, PASSWORD_DEFAULT)
+        ]);
+    }
+
+    public function getById($id){
+
+        $sql = "SELECT * FROM {$this->table} WHERE id = :id";
+
+        $stmt = $this->cone->prepare($sql);
+
+        $stmt->execute([
+            'id' => $id
+        ]);
+
+        return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 }
+?>
