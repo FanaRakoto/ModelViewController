@@ -1,0 +1,80 @@
+MVC:
+
+Models View Cotroller.
+
+Model: Gère les donnée (DATA BASES);
+
+View: Gère l'affichage (HTML, JS)
+
+Controller: [liaison, logique(code php)]
+
+
+config/:
+    connexion base de nonnées
+    variable globale
+
+Model/:
+    user.php
+    produit.php
+
+view/:
+    ffichage
+    login.php
+    register.php
+
+controller/:
+    contient la logique applicative
+    UserController.php
+    ProductController.php
+
+    rôle:
+        recevoir la requette
+        appeler le Model
+        envoyer les données à la view
+
+
+routes/:
+    definit les routes.
+    url:
+
+    exemple:
+        'users' => ['UserController', 'index'];
+
+core/:
+    contient le coeur du systeme
+    middleware.php
+    router.php
+index.php
+    Point d'entrée
+____________________________________________________________________
+====================    FONCTIONNEMENT GLOBAL   ====================
+
+1.  L'utilisateur accède à une URL
+2.  Le router analyse la route
+3.  Le Controller est appelé
+4.  Le Controller appelle le Model
+5.  Le Model récupere les données (base de données)
+6.  Le Controller envoie les données à la view
+7.  La view affiche le resultat
+
+
+
+
+______________________________________________________________
+=====================   AVANTAGE DU MVC ======================
+
+
+1.  Code organisée
+    -   chaque partie a une rôle précis
+    -   Plus lisible et stricturée
+
+2.  Maintenace facile
+    -   Modifier une partie sans casser les autres
+    -   Debug plus rappide
+
+3.  Scalabilitée:
+    -   Adapter aux petits projet   ->  Grand
+    -   Facile à faire évoluer (hitarina);
+
+4.  Reutilisable du code:
+    -   Classe  Réutilisable(POO)    
