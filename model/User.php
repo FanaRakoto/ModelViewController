@@ -14,9 +14,23 @@ class User {
         return $stmt->execute([$nom, $email, password_hash($password, PASSWORD_DEFAULT)]);
     }
 
+    //Methode delete
     public function deleteUsers($id) {
         $sql = "DELETE FROM {$this->table} WHERE id = ?";
         $stmt = $this->cone->prepare($sql);
         return $stmt->execute([$id]);
+    }
+    // Methode Update
+    public function updateUsers($id, $nom, $email, $password) {
+        if (!$id || !$nom ||$email || $password) {
+            throw new ErrorException("Error Processing Request", 1);
+        }
+        $sql = "UPDATE FROM ($this->table) set (name=?, email=?, password=?) where (id = ?)";
+        $stmt = $this->cone->prepare($sql);
+        $stmt->execute([$id, $nom, $email, password_hash($password, PASSWORD_DEFAULT)]);
+        if ($stmt -> rowCount()==0) {
+            throw new Exception("vous n'avez pas fait aucune modification.", 1);
+        }
+        return true;
     }
 }
