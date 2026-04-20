@@ -8,7 +8,6 @@ class User {
     }
 
     public function createUsers($nom, $email, $password) {
-
         $sql = "INSERT INTO {$this->table} (nom, email, password) VALUES (?,?,?)";
         $stmt = $this->cone->prepare($sql);
         return $stmt->execute([$nom, $email, password_hash($password, PASSWORD_DEFAULT)]);
