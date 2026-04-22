@@ -9,7 +9,6 @@ class User {
     }
 
     public function createUsers($nom, $email, $password) {
-
         $sql = "INSERT INTO {$this->table} (nom, email, password) VALUES (?,?,?)";
         $stmt = $this->cone->prepare($sql);
 
