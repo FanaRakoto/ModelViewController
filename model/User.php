@@ -53,6 +53,12 @@ class User {
         }
         return true;
     }
+        public function getAll(){
+        $sql = "SELECT FROM ($this->table)";
+        $res = $this->cone->query($sql);
+        $users = $res->fetchAll(PDO::FETCH_ASSOC);
+    }
+
 
 }
 ?>
