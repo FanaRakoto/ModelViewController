@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Liste Users</title>
+</head>
+<body>
     <style>
         .titre-tableau {
             text-align: center;
@@ -46,12 +53,6 @@
             background-color: rgb(224, 237, 255);
         }
     </style>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <title>Liste Users</title>
-</head>
-<body>
     <h1 class="titre-tableau">Listes des Utilisateurs</h1>
     <div class="cont-ajouter">
         <div class="btn-ajouter">
@@ -73,7 +74,7 @@
             </tr>
         </thead>
         <tbody class="tbody" >
-            <tr >
+            <tr>
                 <td>1</td>
                 <td>Example</td>
                 <td>example@gmail.com</td>

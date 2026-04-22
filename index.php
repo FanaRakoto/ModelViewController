@@ -9,7 +9,7 @@ require_once('./core/rooter.php');
 require('./rootes/web.php');
 
 //connexion db
-$db = new DataBase()->ConnexionData();
+$db = (new DataBase())->ConnexionData();
 
 //Stockage d'URL dans le root/web.php
 
