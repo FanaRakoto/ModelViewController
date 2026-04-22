@@ -5,3 +5,7 @@ CREATE TABLE IF NOT EXISTS users (
     password VARCHAR(255) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+--  CREATE DATABASE IF NOT EXISTS db_mvc;
+-- GRANT ALL PRIVILEGES ON db_mvc.* TO 'dev_user'@'localhost';
+-- FLUSH PRIVILEGES;

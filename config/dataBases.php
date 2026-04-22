@@ -4,8 +4,8 @@ class DataBase
     private $host = 'localhost';
     private $db_name = 'db_mvc';
     private $charset = 'UTF8';
-    private $username = 'BOFA';
-    private $password = '321';
+    private $username = 'dev_user';
+    private $password = '343254262';
     private $pdo;
 
     public function ConnexionData()
@@ -20,4 +20,4 @@ class DataBase
         }
     }
 }
-
+echo "connected";
