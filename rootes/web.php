@@ -1,4 +1,8 @@
 <?php
 $roots = [
-    'login' => ['AuthController', 'showLogin']
+    //Public rout
+    'login' => ['AuthController', 'showLogin'],
+
+    //Protected rout
+    'users' => ['userController', 'ListUsers']
 ];
