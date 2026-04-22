@@ -1,9 +1,9 @@
 <?php
 
-require("/view/partials/header.php");
+require("./view/partials/header.php");
 
 ?>
-<div class="contenair center">
+<div class="container center">
     <form>
         <h1>Connexion</h1>
         <div class="mb-3">
@@ -25,6 +25,6 @@ require("/view/partials/header.php");
 
 <?php
 
-require("/view/partials/footer.php");
+require("./view/partials/footer.php");
 
 ?>
