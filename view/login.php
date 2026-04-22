@@ -1,5 +1,7 @@
 <?php
-require_once(__DIR__ . "./view/partials/header.php");
+
+require("/view/partials/header.php");
+
 ?>
 <div class="contenair center">
     <form>
@@ -22,5 +24,7 @@ require_once(__DIR__ . "./view/partials/header.php");
 </div>
 
 <?php
-require_once("./view/partials/footer.php");
+
+require("/view/partials/footer.php");
+
 ?>
