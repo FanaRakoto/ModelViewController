@@ -16,4 +16,11 @@ class AuthController {
     public function showLogin() {
         require('./view/login.php');
     }
+
+    //affichage de page register
+    public function showRegister() {
+        require('../view/register.php');
+    }
+
+
 }
