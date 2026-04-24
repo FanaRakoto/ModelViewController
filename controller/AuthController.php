@@ -3,24 +3,25 @@
 require_once("./model/User.php");
 
 //class pour l'user connectée.
-class AuthController {
+class AuthController
+{
     private $user;
 
     //user connectée avec la base de donnes.
-    public function __construct($db) {
+    public function __construct($db)
+    {
         session_start(); //démarre la session
         $this->user = new User($db);
     }
 
     //affichage de page login
-    public function showLogin() {
+    public function showLogin()
+    {
         require('./view/login.php');
     }
 
-    //affichage de page register
-    public function showRegister() {
+    public function showRegister()
+    {
         require('../view/register.php');
     }
-
-
 }
