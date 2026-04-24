@@ -3,7 +3,8 @@
     .contenair {
         width: 30% ;
         margin: auto;
-        margin-top: 10rem;
+        margin-top: 2rem ;
+        margin-bottom: 2rem;
         background-color: white;
         padding: 2rem;
         border-radius: 20px;
