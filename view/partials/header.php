@@ -102,9 +102,7 @@
             z-index: 1;
             position: relative;
         }
-        .container {
-            background-color: #ef0d0d;
-        }
+        
     </style>
 </head>
 
