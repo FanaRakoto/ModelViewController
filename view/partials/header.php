@@ -58,44 +58,10 @@
             color: #000;
         }
 
-        @media (min-width: 991px) {
-
-            .nav-link::before {
-                content: "";
-                position: absolute;
-                bottom: 0;
-                left: 50%;
-                transform: translateX(-50%);
-                width: 0%;
-                height: 2px;
-                background-color: #009970;
-                visibility: hidden;
-                transition: .3s ease-in-out;
-            }
-
-            .nav-link:hover::before,
-            .nav-link.active::before {
-                visibility: visible;
-                width: 100%;
-            }
-        }
 
 
-        .hero-section {
-            background: url(https://images.pexels.com/photos/34233738/pexels-photo-34233738/free-photo-of-reunion-d-equipe-dans-un-environnement-de-bureau-moderne.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1%201x,%20https://images.pexels.com/photos/34233738/pexels-photo-34233738/free-photo-of-reunion-d-equipe-dans-un-environnement-de-bureau-moderne.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2%202x) no-repeat center;
-            width: 100%;
-            background-size: cover;
-        }
 
 
-        .hero-section .container {
-            height: 70vh;
-            z-index: 1;
-            position: relative;
-        }
-        .container {
-            background-color: #ef0d0d;
-        }
     </style>
 </head>
 
@@ -134,11 +100,5 @@
     </nav>
 
     
-    <div class="hero-section">
-        <div class="container d-flex align-items-center justify-content-center fs-1 text-white flex-column">
-            <h1>Hero Section MVC</h1>
-            <h1>Collaboration GitHub</h1>
-        </div>
 
-    </div>
  
