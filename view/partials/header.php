@@ -85,17 +85,8 @@
             background: url(https://images.pexels.com/photos/34233738/pexels-photo-34233738/free-photo-of-reunion-d-equipe-dans-un-environnement-de-bureau-moderne.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1%201x,%20https://images.pexels.com/photos/34233738/pexels-photo-34233738/free-photo-of-reunion-d-equipe-dans-un-environnement-de-bureau-moderne.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2%202x) no-repeat center;
             width: 100%;
             background-size: cover;
-            position: absolute;
         }
-        .hero-section::before {
-            position: absolute;
-            background-color: rgba(0, 0, 0, 0.5);
-            content: "";
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-        }
+
 
         .hero-section .container {
             height: 70vh;
@@ -106,7 +97,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg fixed-top">
+    <nav class="navbar navbar-expand-lg ">
         <div class="container-fluid">
             <a class="navbar-brand me-auto" href="#">MVCLogo</a>
 
@@ -139,7 +130,7 @@
         </div>
     </nav>
 
-    <!--
+    
     <div class="hero-section">
         <div class="container d-flex align-items-center justify-content-center fs-1 text-white flex-column">
             <h1>Hero Section MVC</h1>
@@ -147,4 +138,4 @@
         </div>
 
     </div>
- -->
+ 

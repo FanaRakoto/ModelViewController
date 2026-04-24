@@ -10,11 +10,11 @@ class userController
     //user connectée avec la base de donnes.
     public function __construct($db)
     {
-        Middleware:: auth();//protection route
+        Middleware::auth();//protection route
         $this->user = new User($db);
     }
 
-    //affichage de page login
+    //affichage de page list users.
     public function ListUser()
     {
         require('./view/users.php');
