@@ -17,6 +17,13 @@
 </style>
 <div class="contenair">
     <h1 class="titre-inscrit">Inscription</h1><br>
+<?php
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
+require("./view/partials/header.php"); 
+?>
+<div class="container">
      <form action="index.php?url=registerpost" method="POST" class="row g-3">
         <label for="">Nom :</label>
         <input type="text" id="nom" name="nom" class="form-control">
@@ -29,4 +36,4 @@
 
         <button type="submit" class="btn btn-primary mb-3">Register</button>
 </div>
-<?php require "partials/footer.php";?>
+<?php require("./view/partials/footer.php");?>

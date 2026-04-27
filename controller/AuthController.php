@@ -20,11 +20,11 @@ class AuthController
         require('./view/login.php');
     }
 
-    
-    //affichage de page register
-    public function showRegister() {
-        require('../view/register.php');
+    public function showRegister()
+    {
+        require('./view/register.php');
     }
+
 
     //create de user
     public function createUser()
@@ -35,9 +35,9 @@ class AuthController
             $password = $_POST['password'];
             $this->user->createUsers($name, $email, $password);
         }
-
-        
     }
+
+    //create de user
 
 
     
