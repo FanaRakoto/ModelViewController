@@ -50,4 +50,12 @@ class AuthController
             }
         }
     }
+
+    // Logout
+    public function logout() {
+        session_destroy();
+        header("Location: ../view/login.php");
+        exit();
+    }
+
 }

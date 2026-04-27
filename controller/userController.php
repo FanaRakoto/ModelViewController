@@ -45,10 +45,5 @@ class userController
 
 
 
-    
-
-    
-
-
 
 }
