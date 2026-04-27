@@ -10,14 +10,14 @@ class Rooter {
         //mahaka classe any anaty controller
         $controllerName = $roots[$url][0];
         //mahaka méthode dans le class
-        $methode = $roots[$url][1];
+        $method = $roots[$url][1];
 
         //variation de chémin de controller qui indique le chémin et le root
         require_once("./controller/{$controllerName}.php");
 
         //respect la connexion de base de donnes.
         $controller = new $controllerName($db);
-        $controller->$methode();
+        $controller->$method();
     }
 }
 
