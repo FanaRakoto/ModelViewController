@@ -35,6 +35,8 @@ class AuthController
             $password = $_POST['password'];
             $this->user->createUsers($name, $email, $password);
         }
+
+        
     }
 
 
