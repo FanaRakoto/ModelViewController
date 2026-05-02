@@ -16,4 +16,8 @@ class AuthController {
     public function showLogin() {
         require('./view/login.php');
     }
+
+    
+
+
 }
