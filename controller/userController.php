@@ -14,7 +14,7 @@ class userController
         $this->user = new User($db);
     }
 
-    //affichage de page login
+    //affichage de page list users.
     public function ListUser()
     {
         require('./view/users.php');
