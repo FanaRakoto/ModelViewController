@@ -19,4 +19,37 @@ class userController
     {
         require('./view/users.php');
     }
+
+     //update de user
+    public function updateUser()
+    {
+        if (isset($_POST['update'])) {
+            $id = $_POST['id'];
+            $name = $_POST['name'];
+            $email = $_POST['email'];
+            $password = $_POST['password'];
+            $this->user->updateUsers($id, $name, $email, $password);
+        }
+    }
+
+    //delete de user
+    public function deleteUser()
+    {
+        if (isset($_POST['delete'])) {
+            $id = $_POST['id'];
+            $this->user->deleteUsers($id);
+        }
+    }
+
+    
+
+
+
+
+    
+
+    
+
+
+
 }
