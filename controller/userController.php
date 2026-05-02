@@ -10,7 +10,7 @@ class userController
     //user connectée avec la base de donnes.
     public function __construct($db)
     {
-        Middleware:: auth();//protection route
+        Middleware::auth();//protection route
         $this->user = new User($db);
     }
 
@@ -41,10 +41,16 @@ class userController
         }
     }
 
-    
-
-
-
+    //create de user
+    public function createUser()
+    {
+        if (isset($_POST['create'])) {
+            $name = $_POST['name'];
+            $email = $_POST['email'];
+            $password = $_POST['password'];
+            $this->user->createUsers($name, $email, $password);
+        }
+    }
 
     
 
