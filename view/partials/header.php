@@ -61,6 +61,12 @@
 
 
 
+        .hero-section .container {
+            height: 70vh;
+            z-index: 1;
+            position: relative;
+        }
+        
 
     </style>
 </head>
