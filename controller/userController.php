@@ -41,18 +41,9 @@ class userController
         }
     }
 
-    //create de user
-    public function createUser()
-    {
-        if (isset($_POST['create'])) {
-            $name = $_POST['name'];
-            $email = $_POST['email'];
-            $password = $_POST['password'];
-            $this->user->createUsers($name, $email, $password);
-        }
-    }
-
     
+
+
 
     
 

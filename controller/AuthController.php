@@ -17,14 +17,22 @@ class AuthController {
         require('./view/login.php');
     }
 
-<<<<<<< HEAD
     
-=======
     //affichage de page register
     public function showRegister() {
         require('../view/register.php');
     }
->>>>>>> 6fa4e39b08fc17a682c06306a7c9fe1a0b9edb57
+
+    //create de user
+    public function createUser()
+    {
+        if (isset($_POST['create'])) {
+            $name = $_POST['name'];
+            $email = $_POST['email'];
+            $password = $_POST['password'];
+            $this->user->createUsers($name, $email, $password);
+        }
+    }
 
 
 }
