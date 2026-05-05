@@ -26,20 +26,14 @@ class AuthController
         require('../view/register.php');
     }
 
-    //create de user
-    public function createUser()
-    {
-        if (isset($_POST['create'])) {
-            $name = $_POST['name'];
-            $email = $_POST['email'];
-            $password = $_POST['password'];
-            $this->user->createUsers($name, $email, $password);
+    //creation d'un nouvel utilisateur
+    public function register($nom, $email, $password) {
+        if ($this->user->createUsers($nom, $email, $password)) {
+            header("Location: login.php");
+            exit();
+        } else {
+            echo "Erreur lors de l'inscription.";
         }
-
-        
     }
-
-
-    
 }
 

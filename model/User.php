@@ -65,16 +65,13 @@ class User {
     public function login($email, $password) {
         $sql = "SELECT * FROM {$this->table} WHERE email = :email";
         $stmt = $this->cone->prepare($sql);
-        $stmt->execute([
-            'email' => $email
-        ]);
+        $stmt->execute(['email' => $email]);
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
         if ($user && password_verify($password, $user['password'])) {
             return $user;
         }
-
         return false;
-
     }
 }
 
