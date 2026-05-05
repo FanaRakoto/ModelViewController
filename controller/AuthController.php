@@ -58,5 +58,20 @@ class AuthController
         exit();
     }
 
+    //create de user
+    public function createUser() {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $nom = htmlspecialchars($_POST['nom']);
+            $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+            $password = $_POST['password'];
+
+            if ($this->user->createUsers($nom, $email, $password)) {
+                header('Location: index.php?action=login&success=1');
+                exit();
+            } else {
+                echo "Erreur lors de la création de l'utilisateur.";
+            }
+        }
+    }
 
 }
